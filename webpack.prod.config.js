@@ -23,7 +23,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     modulesDirectories: [NODE_MODULES, 'app']
   },
-  entry: [ 'bootstrap-loader/extractStyles', PATHS.app ],
+  entry: [ 'bootstrap-loader', PATHS.app ],
   output: {
     path: PATHS.build,
     filename: 'js/bundle.js'
@@ -60,8 +60,8 @@ module.exports = {
         collapseWhitespace: true
       },
       cdnRefs: [
-        'https://fb.me/react-0.14.6.min.js',
-        'https://fb.me/react-dom-0.14.6.min.js'
+        'https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.min.js'
       ]
     }),
     new ExtractTextPlugin('css/[name].css', { allChunks: true })
